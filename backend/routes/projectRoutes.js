@@ -4,12 +4,12 @@ const router = express.Router();
 const {
   createProject,
   getProjects,
-} = require("./controllers/projectController");
+} = require("../controllers/projectController");
 
 const {
   auth,
   isAdmin,
-} = require("./middleware/authMiddleware");
+} = require("../middleware/authMiddleware");
 
 router.post("/", auth, isAdmin, createProject);
 router.get("/", auth, getProjects);
