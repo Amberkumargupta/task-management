@@ -4,12 +4,12 @@ const router = express.Router();
 const {
   createTask,
   getTasks,
-} = require("../controllers/taskController");
+} = require("./controllers/taskController");
 
 const {
   auth,
   isAdmin,
-} = require("../middleware/authMiddleware");
+} = require("./middleware/authMiddleware");
 
 router.post("/", auth, isAdmin, createTask);
 router.get("/", getTasks);
