@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "cd backend && npm start"
+  },
   "dependencies": {
     "dotenv": "^17.4.2"
   }
